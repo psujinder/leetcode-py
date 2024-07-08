@@ -1,5 +1,11 @@
 from typing import List
 
+"""
+Time complexity : o(n) as all the elements of the array are processed one linearly
+Space complexuty: o(1) as there is not additional space being consumed
+
+"""
+
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
