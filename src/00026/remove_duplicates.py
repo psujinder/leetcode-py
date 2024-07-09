@@ -1,9 +1,14 @@
 from typing import List
 
 """
-Time complexity : o(n) as all the elements of the array are processed one linearly
-Space complexuty: o(1) as there is not additional space being consumed
+Leetcode problem link
+    https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
+Time complexity 
+    O(n) as all the elements of the array are processed one linearly
+    
+Space complexuty
+    O(1) as there is not additional space being consumed
 """
 
 

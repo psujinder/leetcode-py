@@ -1,14 +1,17 @@
 from typing import List
 
 """
-Leetcode problem link : https://leetcode.com/problems/rotate-array/description/
+Leetcode problem link
+    https://leetcode.com/problems/rotate-array/description/
+
 Time complexity
-    o(n) for reversing the entire array
-    o(k) for reversing the first k elements
-    o(n-k) for reversing the rest of the elements
-    o(n) = o(n) + o(k) + o(n-k)
+    O(n) for reversing the entire array
+    O(k) for reversing the first k elements
+    O(n-k) for reversing the rest of the elements
+    O(n) = o(n) + o(k) + o(n-k)
+    
 Space complexity
-    o(1) as the input array is modified in place
+    O(1) as the input array is modified in place
 """
 
 

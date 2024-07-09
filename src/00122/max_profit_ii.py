@@ -1,9 +1,14 @@
 from typing import List
 
 """
-Time complexity : o(n) as all the elements of the array are processed one linearly
-Space complexuty: o(1) as there is not additional space being consumed
+Leetcode problem link
+    https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/
 
+Time complexity
+    O(n) as input array is traversed once linearly
+
+Space complexuty
+    O(1) as there is no additional space being consumed
 """
 
 
