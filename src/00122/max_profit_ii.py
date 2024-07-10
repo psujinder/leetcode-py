@@ -1,18 +1,18 @@
 from typing import List
 
-"""
-Leetcode problem link
-    https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/
-
-Time complexity
-    O(n) as input array is traversed once linearly
-
-Space complexuty
-    O(1) as there is no additional space being consumed
-"""
-
 
 class Solution:
+    """
+    Leetcode problem link
+        https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/
+
+    Time complexity
+        O(n) as input array is traversed once linearly
+
+    Space complexuty
+        O(1) as there is no additional space being consumed
+    """
+
     def maxProfit(self, prices: List[int]) -> int:
 
         total_profit = 0
