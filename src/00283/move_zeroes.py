@@ -10,7 +10,7 @@ class Solution:
         O(n) as the array is traversed once linearly
 
     Space complexity
-        O(1) as constact space is used
+        O(1) as constant space is used
     """
 
     def moveZeroes(self, nums: List[int]) -> None:
@@ -24,5 +24,3 @@ class Solution:
 
         for i in range(i, len(nums)):
             nums[i] = 0
-
-        return nums
