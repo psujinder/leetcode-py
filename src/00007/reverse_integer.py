@@ -4,7 +4,7 @@ class Solution:
         https://leetcode.com/problems/reverse-integer/description/
 
     Time Complexity:
-        O(log10(x)) because the number of digits in the input number x determines the number of iterations
+        O(log(n)) because the number of digits in the input number x determines the number of iterations
 
     Space Complexity:
         O(1) as constant additional space is being used
