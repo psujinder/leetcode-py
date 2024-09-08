@@ -12,3 +12,7 @@ def solution():
 )
 def test_find_num_with_even_digits(solution, nums, count):
     assert solution.findNumbers(nums) == count
+
+
+if __name__ == "__main__":
+    pytest.main()
