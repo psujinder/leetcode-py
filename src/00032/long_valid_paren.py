@@ -32,11 +32,12 @@ class Solution:
         stack = []
         stack.append(-1)
 
-        for idx in range(len(s)):
-            if s[idx] == "(":
+        for idx, paren in enumerate(s):
+            if paren == "(":
                 stack.append(idx)
             else:
                 stack.pop()
+
                 if not stack:
                     stack.append(idx)
                 else:
