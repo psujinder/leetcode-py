@@ -24,6 +24,9 @@ class Solution:
 
     def isValid(self, s: str) -> bool:
 
+        if len(s) % 2 != 0:
+            return False
+
         paren_mapping = {
             ")": "(",
             "}": "{",
@@ -33,12 +36,10 @@ class Solution:
         stack = []
 
         for paren in s:
-
             if paren in paren_mapping:
-                if stack and stack[-1] == paren_mapping[paren]:
-                    stack.pop()
-                else:
+                if not stack or stack[-1] != paren_mapping[paren]:
                     return False
+                stack.pop()
             else:
                 stack.append(paren)
 
