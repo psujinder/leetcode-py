@@ -1,13 +1,36 @@
 from typing import List
+import math
+
 
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
-        distances = []
+        result = []
+        min_distance = math.inf
+        max_distance = -math.inf
+
+        distance_map = {}
 
         for point in points:
-            distance = point[0]**2 = point[1]**2
-            distances.append((distance, point))
+            distance = point[0] ** 2 + point[1] ** 2
+            if distance in distance_map:
+                distance_map[distance].append(point)
+            else:
+                distance_map[distance] = [point]
 
-        distances.sort(key=lambda x:x[0])
+            min_distance = min(min_distance, distance)
+            max_distance = max(max_distance, distance)
 
-        return [ val for _,val in distances[:k]]
+        for distance in sorted(distance_map):
+            for point in distance_map[distance]:
+                result.append(point)
+
+                if len(result) == k:
+                    return result
+
+        return result
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    result = sol.kClosest([[3, 3], [5, -1], [-2, 4]], 2)
+    print(result)

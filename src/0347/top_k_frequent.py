@@ -2,18 +2,30 @@ from typing import List, Counter
 
 
 class Solution:
+
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        count_map = {}
 
-        count_map = Counter(nums)
-        result = []
+        for num in nums:
+            count_map[num] = count_map.get(num, 0) + 1
 
-        buckets = [[] for _ in range(len(nums) + 1)]
+        bucket = [[] for _ in range(len(nums) + 1)]
 
         for num, freq in count_map.items():
-            buckets[freq].append(num)
+            bucket[freq].append(num)
 
-        for i in range(len(buckets) - 1, -1, -1):
-            for num in buckets[i]:
+        result = []
+
+        for i in range(len(bucket) - 1, -1, -1):
+            for num in bucket[i]:
                 result.append(num)
                 if len(result) == k:
                     return result
+
+        return result
+
+
+if __name__ == "__main__":
+    sol = Solution()
+    result = sol.topKFrequent([1, 1, 1, 2, 2, 3], 2)
+    print(result)

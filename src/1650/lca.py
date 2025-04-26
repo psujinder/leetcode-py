@@ -1,6 +1,4 @@
-
-
-#Definition for a Node.
+# Definition for a Node.
 class Node:
     def __init__(self, val):
         self.val = val
@@ -8,8 +6,9 @@ class Node:
         self.right = None
         self.parent = None
 
+
 class Solution:
-    def lowestCommonAncestor(self, p: 'Node', q: 'Node') -> 'Node':
+    def lowestCommonAncestor(self, p: "Node", q: "Node") -> "Node":
 
         seen = set()
 
@@ -17,18 +16,17 @@ class Solution:
             seen.add(p)
             p = p.parent
 
-        while q:
-            if q in seen:
-                return q
+        while q not in seen:
             q = q.parent
 
-    
-    def lowestCommonAncestor2(self, p: 'Node', q: 'Node') -> 'Node':
+        return q
 
-        p1, p2 = p,q
+    def lowestCommonAncestor2(self, p: "Node", q: "Node") -> "Node":
+
+        p1, p2 = p, q
 
         while p1 != p2:
-            
+
             p1 = p1.parent
             if not p1:
                 p1 = q
@@ -36,7 +34,5 @@ class Solution:
             p2 = p2.parent
             if not p2:
                 p1 = q
-        
+
         return p1
-        
-    
